@@ -1,5 +1,6 @@
 // question: https://leetcode.com/problems/move-zeroes/
 
+//{1, 0, 2, 3, 2, 0, 0, 4, 5, 1}
 class Solution {
     public:
         void moveZeroes(vector<int>& nums) {
@@ -48,8 +49,8 @@ class Solution {
         //O(N) + O(X) + O(N-X) ~ O(2*N), where N = total no. of elements,
         // X = no. of non-zero elements, and N-X = total no. of zeros.
 
-                
-        //Solution 3 : Time complexity: O(n).
+        // {1, 0, 2, 3, 2, 0, 0, 4, 5, 1}        
+        //Solution 3 : Time complexity: O(n). using 2 pointers
         // Space complexity: O(1).
             class Solution {
                 public:
@@ -63,3 +64,9 @@ class Solution {
                         }
                     }
                 };
+
+
+
+      
+    
+

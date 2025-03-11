@@ -19,3 +19,16 @@ class Solution {
           return false;
       }
   };
+
+  //using for each loop
+  class Solution {
+    public:
+      bool searchInSorted(vector<int>& arr, int k) {
+  
+          for(int x: arr){
+              if(x == k)
+              return true;
+          }
+          return false;
+      }
+  };

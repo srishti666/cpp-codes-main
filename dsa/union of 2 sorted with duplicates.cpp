@@ -5,8 +5,6 @@
 
 class Solution {
     public:
-      // a,b : the arrays
-      // Function to return a list containing the union of the two arrays.
       vector<int> findUnion(vector<int> &a, vector<int> &b) {
           map<int, int> map;
           vector<int> Union;
@@ -25,3 +23,21 @@ class Solution {
           return Union;
       }
   };
+
+  //Solution2: Using Set
+  class Solution {
+    public:
+      vector<int> findUnion(vector<int> &a, vector<int> &b) {
+        Set<int> set;
+        vector<int> Union;
+
+        for(int i=0; i<a.size(); i++){
+            set.insert[a[i]];
+        }
+        for(int i=0; i<b.size(); i++){
+            set.insert[b[i]];
+        }
+        for(auto &it: set){
+            Union.push_back(it);
+        }
+      }}

@@ -28,14 +28,14 @@ class Solution {
   class Solution {
     public:
       vector<int> findUnion(vector<int> &a, vector<int> &b) {
-        Set<int> set;
+        set<int> set;
         vector<int> Union;
 
         for(int i=0; i<a.size(); i++){
-            set.insert[a[i]];
+            set.insert(a[i]);
         }
         for(int i=0; i<b.size(); i++){
-            set.insert[b[i]];
+            set.insert(b[i]);
         }
         for(auto &it: set){
             Union.push_back(it);

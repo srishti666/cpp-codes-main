@@ -7,3 +7,11 @@ void insert(int A[], int n){
     }
     A[i] = temp;
 }
+
+void createHeap(){
+    int A[] = {0,10,20,30,25,5,40,35};
+    int i;
+    for(i=2, i<=7; i++){
+        insert(A,i);
+    }
+}

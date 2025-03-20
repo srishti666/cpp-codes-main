@@ -6,6 +6,7 @@
         "string": "cpp",
         "vector": "cpp",
         "list": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "format": "cpp"
     }
 }

@@ -14,7 +14,7 @@ int getLongestSubarray(vector<int>& a, long long k) {
         sum += a[i];
 
         // if the sum = k, update the maxLen:
-        if (sum == k) {
+        if(sum == k) {
             maxLen = max(maxLen, i + 1);
         }
 
@@ -23,7 +23,7 @@ int getLongestSubarray(vector<int>& a, long long k) {
 
         //if my map has the remaining , which means it will not be pointing to the end
         //Calculate the length and update maxLen:
-        if (map.find(rem) != map.end()) {
+        if(map.find(rem) != map.end()) {
             int len = i - map[rem];
             maxLen = max(maxLen, len);
         }

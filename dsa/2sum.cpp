@@ -28,3 +28,24 @@ int main()
          << ans[1] << "]" << endl;
     return 0;
 }
+
+
+// TC: O(n) using hashmap
+
+class Solution {
+    public:
+        vector<int> twoSum(vector<int>& nums, int target) {
+            map<int, int> map;
+            int n = nums.size();
+    
+            for(int i=0; i<n; i++){
+                int a = nums[i];
+                int rem = target - nums[i];
+                if(map.find(rem) != map.end()){
+                   return {map[rem], i};
+                }
+                map[a] = i;
+            }
+            return {-1, -1};
+        }
+    };

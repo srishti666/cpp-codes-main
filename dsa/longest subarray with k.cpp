@@ -1,5 +1,8 @@
 // question: https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1
 
+
+//TC: O(n logn) : ordered map SC: O(n)
+//O(n *1) unordered map with no collisions, O(n*n) unordered map with collisions
 int getLongestSubarray(vector<int>& a, long long k) {
     int n = a.size(); // size of the array.
 
@@ -32,4 +35,4 @@ int getLongestSubarray(vector<int>& a, long long k) {
     }
 
     return maxLen;
-}
+

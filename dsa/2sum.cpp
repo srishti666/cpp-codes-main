@@ -30,7 +30,7 @@ int main()
 }
 
 
-// TC: O(n) using hashmap
+// TC: O(n*logn) using hashmap SC: O(n) dumping elements in hashmap
 
 class Solution {
     public:
@@ -49,3 +49,27 @@ class Solution {
             return {-1, -1};
         }
     };
+
+    //2nd Variant
+    //TC: O(n)->hashmap + O(nlogn)-> sorting
+    //SC: O(1)
+
+    class Solution {
+        public:
+            vector<int> twoSum(vector<int>& nums, int target) {
+                sort(nums.begin(), nums.end());
+                int n = nums.size();
+                int right = n-1;
+                int left = 0;
+        
+                while(left<right){
+                    int sum = nums[left] + nums[right];
+                    if(sum == target){
+                        return "Yes";
+                    }
+                    else if(sum < target) left++;
+                    else right--;
+                }
+                return "No";
+            }
+        };

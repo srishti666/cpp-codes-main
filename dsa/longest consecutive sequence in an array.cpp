@@ -54,5 +54,35 @@ int longestSuccessiveElements(vector<int>&a) {
         longest = max(longest, cnt);
     }
     return longest;
+}
 
+
+//optimal
+//TC: O(3n) SC:O(n)
+// refer to : https://takeuforward.org/data-structure/longest-consecutive-sequence-in-an-array/  (21: 06mins)
+//set takes O(n) in the worst cases, usually unordered set takes O(1); set takes O(1) but for n elements it takes O(n)
+//for loop -> O(n) + while loop -> O(2n) total O(3n)
+
+int longestSuccessiveElements(vector<int>&a) {
+    int n = a.size();
+    if(n == 0) return 0;
+    int longest = 1;
+
+    unordered_set<int> st;
+    for(int i=0; i<n; i++){
+        st.insert(a[i]);
+    }
+
+    for(auto it: st){
+        if(st.find(x-1) == st.end()){
+            int count = 1;
+            int x = it;
+            while(st.find(x+1) != st.end()){
+                count++;
+                x++;
+            }
+            longest = max(longest, count);
+        }
+    }
+    return longest;
 }

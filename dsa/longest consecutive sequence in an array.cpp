@@ -2,7 +2,7 @@
 
 //TC: O(n^2)  SC: O(n)
 bool linearSearch(vector<int>&a, int num) {
-    int n = a.size(); //size of array
+    int n = a.size(); 
     for (int i = 0; i < n; i++) {
         if (a[i] == num)
             return true;

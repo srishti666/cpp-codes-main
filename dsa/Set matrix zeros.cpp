@@ -49,30 +49,33 @@ vector<vector<int>> zeroMatrix(vector<vector<int>> &matrix, int n, int m) {
 //better solution
 //TC: O(n*m) + O(n*m) = O(2*(n*m))
 
+
 class Solution {
     public:
         void setZeroes(vector<vector<int>>& matrix) {
+            int m = matrix.size();
+            int n = matrix[0].size();
     
-            //size of the matrix rows and cols
-            int n = matrix.size();
-            int m = matrix[0].size();
+            vector<int> row(m, 0);
+            vector<int> col(n, 0);
     
-            int row[n] = {0};
-            int col[m] = {0};
-    
-            for(int i=0; i<n; i++){
-                for(int j=0; j<m; j++){
-                    if(matrix[i][j] == 0) row[i] = 1;col[j] = 1;
+            // Mark the rows and columns that are to be set to zero
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (matrix[i][j] == 0) {
+                        row[i] = 1;
+                        col[j] = 1;
+                    }
                 }
             }
     
-            for(int i=0; i<n; i++){
-                for(int j=0; j<m; j++){
-                    if(row[i] || col[j]){
+            // Set the matrix cells to zero
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (row[i] == 1 || col[j] == 1) {
                         matrix[i][j] = 0;
                     }
                 }
             }
-            return matrix;
         }
     };

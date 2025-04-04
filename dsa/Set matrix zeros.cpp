@@ -48,6 +48,7 @@ vector<vector<int>> zeroMatrix(vector<vector<int>> &matrix, int n, int m) {
 
 //better solution
 //TC: O(n*m) + O(n*m) = O(2*(n*m))
+//SC: O(n+m)
 
 
 class Solution {

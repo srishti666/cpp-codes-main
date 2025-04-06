@@ -6,11 +6,13 @@ class Solution {
   
       int findFloor(vector<int>& arr, int x) {
           int n = arr.size();
+          int floor = -1;
   
           for(int i=0; i<n; i++){
-              if(arr[i] >= x);
-              return i;
-          }
-          return n;
+            if(arr[i] <= x)
+                floor = i;
+            else break;
+            }
+            return floor;
       }
   };

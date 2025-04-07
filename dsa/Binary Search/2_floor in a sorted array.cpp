@@ -40,4 +40,8 @@ class Solution {
         return floor;
    
     }
+<<<<<<< HEAD
   }
+=======
+  }
+>>>>>>> 37257aa64c36c62ccb40ca1d42f41e0f897e754c

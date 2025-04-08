@@ -2,7 +2,7 @@
 
 //find lower as well as upper bound
 
-
+//TC: O(nlogn)+O(n)   SC: O(n)
 class Solution {
     public:
       vector<int> getFloorAndCeil(int x, vector<int> &arr) {

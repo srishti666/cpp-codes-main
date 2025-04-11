@@ -28,13 +28,16 @@ class Solution {
                     int mid = (low+high)/2;
         
                     if(nums[mid] == target) return mid;
-        
+
+                    //check if the left side of the array is sorted or not by chceking whether they are consecutive or not
+                    //left sorted
                     if(nums[low] <= nums[mid]){
                         if(nums[low] <= target && target <= nums[mid]) {
                             high = mid - 1;
                         }
                         else low = mid + 1;
                     }
+                    //right sorted
                     else{
                         if(nums[mid] <= target && target <= nums[high]) {
                             low = mid + 1;

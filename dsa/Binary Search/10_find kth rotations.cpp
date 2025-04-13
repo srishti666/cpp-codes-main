@@ -14,13 +14,7 @@ class Solution {
           while(low <= high){
               int mid = (low + high);
               //left half is sorted
-              if(arr[low] <= arr[high]){
-                  if(arr[low] < ans){
-                      ans = arr[low];
-                      index = low;
-                  }
-                 
-              }
+             
               if(arr[low] <= arr[mid]){
                   if(arr[low] < ans){
                       ans = arr[low];

@@ -1,4 +1,4 @@
-//question:
+//question:https://www.geeksforgeeks.org/problems/square-root/0?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=square-root
 //Brute-force-> TC: O(n)
 
 class Solution {
